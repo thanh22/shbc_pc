@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <title>選考を進める（メール作成）</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!--[if lt IE 9]>
+<script src="./lib/html5shiv.js"></script>
+<script src="./lib/selectivizr-min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/ie8.css">
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="./css/styles.css?2201121623">
+<link rel="stylesheet" type="text/css" href="./css_b/styles_b.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">
+var ua = navigator.userAgent;
+var getDevice = (function(){
+if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+document.write('<meta name="viewport" content="width=device-width">');
+}else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+document.write('<meta name="viewport" content="width=1200, user-scalable=no, maximum-scale=1.0">');}
+else{
+document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">');}
+})();
+</script>
+<meta name="_csrf_header" content="X-CSRF-TOKEN">
+<meta name="_server_context_path" content="/" />
+<!-- TODO リンクを無効化するスタイルの定義はここで良いか判断してもらう -->
+<style>
+  .disable-link {
+    pointer-events: none;
+    cursor: default;
+    color: #bebebe;
+  }
+</style>
+
+
+  <link rel="stylesheet" type="text/css" href="./lib/remodal/remodal.css">
+  <link rel="stylesheet" type="text/css" href="./css/remodal-style.css">
+</head>
+<body class="pubInfo" data-active-nav="04" data-current-nav="04-01">
+<div id="wrapper">
+  <header id="siteHeader">
+<div id="siteID"><a href="./"><img src="./img/siteID.png" width="170" height="30" alt="イーキャリア"></a>採用ご担当者様ページ</div>
+  <div class="user">株式会社エージェントソフトウェア　(<span id="companyCode">X0000000003</span>)　伊藤 和子様</div>
+<a href="javascript: document.logoutForm.submit()" class="logout">ログアウト</a>
+<form name="logoutForm" action="/logout" method="post"><input type="hidden" name="_csrf" value="a340869a-9b3d-41c0-b7ef-061438e392d2"/>
+  <input hidden type="submit" value="Sign Out"/>
+</form>
+</header>
+
+
+  <div id="container">
+
+<!--
+  -- changed area START
+  -->
+
+    <main id="pageBody">
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="./entry">応募者管理</a></li>
+          <li><a href="./entry/list">応募者一覧</a></li>
+          
+          <li><span>個別で対応する（選考を進める/戻す）</span></li>
+        </ul>
+      </div>
+
+      <header class="pageBodyHeader">
+        
+        <h1>個別で対応する（選考を進める/戻す）</h1>
+      </header>
+
+      <article class="applicant">
+
+        
+  <nav class="tab">
+    <ul>
+      <li>
+        
+        <span>選考を進める/戻す</span>
+      </li>
+      
+
+      
+      <li><a href="./entry/candidate">評価・メモを入力</a></li>
+
+      
+      <li><a href="./entry/mail/initialize">メールのみ送る</a></li>
+
+      
+      <li class="last"><a href="./entry/termination/initialize">選考終了する</a></li>
+    </ul>
+  </nav>
+
+
+        
+        
+        
+
+        <div class="mailTopBlock">
+          <p>応募者の選考を進めます。選考を選び「選考のみ進める」か「メールを送信して選考を進める」ボタンをクリックしてください。 <br>
+            メールを送信する場合は、件名と本文を入力してください。</p>
+          <ul class="progressExplain">
+            <li>選考の説明</li>
+            <li>書類選考：書類選考中・面接設定前</li>
+            <li>面接中：面接設定済み・面接後評価中</li>
+            <li>オファー：内定・内定承諾</li>
+            <li>入社：入社</li>
+          </ul>
+          <p class="linkMark"><a href="./sample/mail" target="_blank" class="ext">メールサンプルはこちら</a></p>
+          <p>※応募者対応は1つのタブでご操作下さい</p>
+          <div class="tableContainer">
+            <div class="inner">
+              <h2>対象者</h2>
+              <div class="tableWrap">
+                <div class="scroller">
+                  <table>
+                    <tr>
+                      <th>和田 アキ子</th>
+                      <td>
+                        <a href="./entry/10008/careersheet" target="_blank" class="cs">キャリアシート</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="scrlParent">
+          <!-- form -->
+          <form id="form" method="post" action="#"><input type="hidden" name="_csrf" value="a340869a-9b3d-41c0-b7ef-061438e392d2"/>
+            <div class="person personAlign">
+              <section>
+                <h2>選考を進める</h2>
+                <p>現在の選考から先に進めることしかできません。メールを送らずに選考を進めることもできます。<br>
+                  <span class="note caution">メールを送って選考を進める場合は、プルダウンから選考を選択し下記のメール文面作成へ進んでください。</span></p>
+                <div class="processFunciton">
+
+                  <select id="progressSelect" name="inputProgressIdentifier">
+                    <option value="0" selected>選考を選択</option>
+                    
+                    <option value="2">書類選考</option>
+                    <option value="3">面接中</option>
+                    <option value="4">オファー</option>
+                    <option value="5">入社</option>
+                  </select>
+
+                  <button id="forwardbutton" class="btn proceed" data-remodal-target="promptSubmit">選考のみ進める</button>
+
+                </div>
+              </section>
+
+              <section>
+                <h2>メール文面作成</h2>
+                <div class="mailFunction">
+                  <select id="templateSelect" name="templateNumber">
+                    <option value="0" selected>テンプレートを選択</option>
+                    <option value="4">プリセット1</option>
+                    <option value="5">プリセット3</option>
+                    <option value="90000003">応募受付</option>
+                    <option value="90000004">面接オファー</option>
+                    <option value="90000005">オンライン面接オファー</option>
+                    <option value="90000006">次回面接オファー</option>
+                    <option value="90000007">書類選考のＮＧ連絡</option>
+                    <option value="90000008">面接のＮＧ連絡</option>
+                    <option value="90000009">内定通知</option>
+                    <option value="1">title1</option>
+                    <option value="2">title2</option>
+                    <option value="3">title3</option>
+                  </select>
+                  <p class="btnSpace">
+                    <a href="javascript:void(0)" onclick="openModal(); return false;" class="btn regular">選択する</a>
+                    <a href="javascript:void(0)" class="btn sub" data-remodal-target="promptReset">リセット</a>
+                  </p>
+                </div>
+                <table class="mailSetting">
+                  <tr>
+                    <th>返信設定</th>
+                    <td><label class="check"><input type="checkbox" id="replyable.availability1" name="replyable.availability" value="true"><input type="hidden" name="_replyable.availability" value="on"/>
+                      返信不可にする</label></td>
+                  </tr>
+                  <tr>
+                    <th>件名</th>
+                    <td class="insertWrap count">カーソル位置に<a href="#" class="btn insert" data-text="{user_id}">{user_id}を挿入</a>
+                      <input type="text" id="subject" maxlength="100" class="full countElm target" name="subject" value="">
+                      <p class="note"><span class="counter">0</span>/100文字</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>本文</th>
+                    <td class="insertWrap count">カーソル位置に<a href="#" class="btn insert" data-text="{user_id}">{user_id}を挿入</a>
+                      <textarea id="content" class="full countElm target l600" name="content"></textarea>
+                      <p class="note"><span class="counter">0</span>/2000文字</p>
+                    </td>
+                  </tr>
+                </table>
+                
+
+    <div class="mailDisplay">
+        <p>●件名・本文に自動で会員氏名（会員No）を挿入する場合<br>
+            【{user_id}を挿入】ボタンをクリックすると、応募者には会員氏名、スカウトメールには会員Noが表示されます。<br>
+            &lt;例&gt;<br>
+            {user_id} 様　ご応募ありがとうございました。→　山田　太郎 様　ご応募ありがとうございました。<br>
+            {user_id} 様　キャリアシートを拝見しました。　→　会員No.00364 様　キャリアシートを拝見しました。</p>
+    </div>
+
+
+                <div class="btnSpace function">
+                  <p>選択されている選考：<b id="selectedProgress"></b></p>
+                  <button type="submit" class="btn mail" formaction="/entry/progress/1/confirm/mail">
+                    送信内容を確認する
+                  </button>
+                </div>
+
+              </section>
+
+              <section>
+                <h2>選考を戻す</h2>
+                <p>誤って進めてしまった選考を戻す場合は選考を戻す画面にお進みください。</p>
+                <div class="processFunciton">
+                  <a href="./entry/10008/progress/1/backward" class="btn proceed">選考を戻す</a>
+                </div>
+              </section>
+
+              <div id="resultMail">
+                
+  
+
+              </div>
+
+
+              
+
+            </div>
+          </form> <!-- //.form-->
+
+        </div>
+        <!-- //scrlParent -->
+        <div class="function btnSpace scrlParentNext">
+          <a href="./entry/list/1" class="btn sub">応募者一覧に戻る</a>
+        </div>
+
+        <div id="onlineInterviewButton">
+          
+  
+
+
+        </div>
+
+      </article>
+
+      <!-- Modal Start -->
+      <div class="modalStage remodal narrow" data-remodal-id="promptSubmit" style="background: none #fff;">
+        <div class="modalWrap" style="background: none #fff;">
+          <article>
+            <p id="confirmsentence"></p>
+            <div class="btnSpace">
+              <a href="#" data-remodal-action="cancel" class="btn cancel">閉じる</a>
+              <button id="forward" class="btn forward complete relTo">OK</button>
+              <span id="forwardUrl" hidden="hidden">/entry/progress/1/forward/complete</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Modal End -->
+
+      <!-- Modal Start -->
+      <div class="modalStage remodal narrow" data-remodal-id="overWrite" style="background: none #fff;">
+        <div class="modalWrap" style="background: none #fff;">
+          <article>
+            <p>件名と本文をテンプレートの内容で上書きします。よろしいですか？</p>
+            <div class="btnSpace">
+              <a href="#" data-remodal-action="cancel" class="btn cancel">閉じる</a>
+              <button class="btn forward complete relTo" id="templateButton">OK</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Modal End -->
+
+      <!-- Modal Start -->
+      <div class="modalStage remodal narrow" data-remodal-id="promptReset" style="background: none #fff;">
+        <div class="modalWrap" style="background: none #fff;">
+          <article>
+            <p>件名と本文をクリアします。よろしいですか？</p>
+            <div class="btnSpace">
+              <a href="#" data-remodal-action="cancel" class="btn cancel">閉じる</a>
+              <button class="btn forward complete relTo" onclick="resetForm()">OK</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Modal End -->
+
+      <!--// #pageBody --></main>
+      
+<!--
+  -- changed area END
+  -->
+
+    <aside id="siteAside">
+  <header>
+    <dl>
+      <dt>ご契約期間</dt>
+      <dd>2017/01/11 〜 2017/04/04</dd>
+    </dl>
+  </header>
+  <nav>
+    <ul>
+      <li class="home" data-nav-index="01"><a href="./">管理者トップ</a></li>
+
+      <li class="pubInfo" data-nav-index="02">
+        <a href="./nonpublic">掲載情報管理</a>
+        <ul>
+          
+          
+          <li data-nav-index="02-03"><a href="./nonpublic">非公開求人情報設定</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="applicant" data-nav-index="04">
+        <a href="./entry">応募者管理<i></i></a>
+        <ul>
+          <li data-nav-index="04-01"><a href="./entry/list">応募者一覧</a></li>
+          <li data-nav-index="04-04"><a href="./entry/search">応募者名検索</a></li>
+          <li data-nav-index="04-02"><a href="./entry/closed">選考終了一覧</a></li>
+          <li data-nav-index="04-03"><a href="./entry/recruiting">採用選考状況</a></li>
+        </ul>
+      </li>
+
+      <li class="scout" data-nav-index="05">
+        <a href="./scout">スカウト</a>
+        <ul>
+          <li data-nav-index="05-01"><a href="./scout/condition/init">検索条件設定</a></li>
+          <li data-nav-index="05-02"><a href="./scout/condition/list">保存条件一覧</a></li>
+          <li data-nav-index="05-03">
+            <a href="./scout/bookmark">ブックマーク</a>
+          </li>
+          
+          <li data-nav-index="05-05"><a href="./scout/mails">送信済みスカウト検索</a></li>
+        </ul>
+      </li>
+      <li class="performance" data-nav-index="06"><a href="./performance/week">パフォーマンスデータ</a>
+        <ul>
+          <li data-nav-index="06-01"><a href="./performance/week">週間レポート</a></li>
+          <li data-nav-index="06-02"><a href="./performance/month">月間レポート</a></li>
+        </ul>
+      </li>
+      <li class="setting" data-nav-index="07"><a href="./configuration">各種設定</a>
+        <ul>
+          <li data-nav-index="07-01"><a href="./configuration/template">メールテンプレート一覧</a></li>
+          <li data-nav-index="07-02">
+            <a href="./configuration/editoraccount/request">原稿制作アカウント発行</a></li>
+          <li data-nav-index="07-03"><a href="./configuration/password/edit">管理者パスワード変更</a>
+          </li>
+          <li data-nav-index="07-04">
+            <a href="./configuration/notification">通知先メールアドレス設定</a></li>
+          <li data-nav-index="07-05">
+            <a href="./configuration/assessment">評価の設定</a></li>
+          <li data-nav-index="07-06"><a href="./configuration/entry">重複応募の設定</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="banner"><a href="./questionnaire">企業アンケートにご協力ください</a></div>
+
+    <a href="./company#a04" class="bannerOnlineInterview disable">
+      <div class="text_1">無料（時間制限なし）</div>
+      <div class="text_2">WEB面接機能<span> が使えます</span></div>
+      <div class="text_3">チェックするだけ 設定はこちら</div>
+    </a>
+
+    
+
+  </nav>
+</aside>
+
+  </div>
+  <!--// #container --><!--</div>-->
+<footer id="siteFooter">
+  <div class="inner">
+    <dl>
+      <dt>お問い合わせ</dt>
+      <dd>イーキャリア事務局 受付時間：9:30～15:00（土日祝を除く）<br>
+        誠に恐れ入りますが、上記時間外のお問い合わせは、営業担当までお願いいたします<br>
+        電話番号：0120-231049 / 03-5549-1275
+        <small>※迅速な対応のため、企業名・ご担当者名をお知らせください。</small>
+      </dd>
+      <dt>マニュアル</dt>
+      <dd class="manualLink">
+        <a href="./manual/ecareer-manual_position.pdf" target="_blank">掲載情報管理編　<i>(PDF形式、11.4MB)</i></a>
+        <a href="./manual/ecareer-manual_configuration.pdf" target="_blank">各種設定編　<i>(PDF形式、1.8MB)</i></a>
+        <a href="./manual/ecareer-manual_scout.pdf" target="_blank">スカウト編　<i>(PDF形式、7.3MB)</i></a>
+        <a href="./manual/ecareer-manual_entry-management.pdf" target="_blank">応募者管理編　<i>(PDF形式、6.6MB)</i></a>
+        <a href="./manual/ecareer-manual_online_interview.pdf" target="_blank">WEB面接編　<i>(PDF形式、2.2MB)</i></a>
+      </dd>
+      <dt>原稿制作</dt>
+      <dd class="manualLink">
+        <a href="./manual/ecareer-guidebook.pdf" target="_blank">原稿制作ガイドブック<i>(PDF形式、463KB)</i></a>
+      </dd>
+    </dl>
+    <div class="contact">
+      <a id="invokeMailer" href="#" class="btn contact invokeMailer">お問い合わせ
+        <small>メーラーが起動します</small>
+      </a>
+    </div>
+    <div id="corpInfo">
+      <b><img src="./img/corpLogo.png" width="149" height="21" alt="SB Human Capital"></b>
+      <small>COPYRIGHT &copy; SB Human Capital Corp. All Rights Reserved.</small>
+    </div>
+  </div>
+  <a href="#wrapper" class="pgTop">ページトップへ</a>
+</footer>
+<!--// #wrapper --><!--</div>-->
+</div>
+<script src="./webjars/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/component/ec_components.js"></script>
+<script src="./js/script_common/ajax_settings.js"></script>
+<script src="./js/ecareer_company.js"></script>
+<script src="./js/component/invokeMailer.js"></script>
+<!--[if lt IE 9]>
+<script>$('body').addClass('ie8');</script>
+<script src="./js/ie8.js"></script>
+<![endif]-->
+
+<script src="./js/max_scroller.js"></script>
+<script src="./lib/remodal/remodal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/2.4.0/dash.all.min.js"></script>
+
+<script>
+
+$(function() {
+
+    var url = $('#selfIntroductionMovie').text();
+    var ua = window.navigator.userAgent;
+    setSource();
+    $('#selectedCandidate').change(changeCareerSheet);
+
+    function setSource() {
+      if ( /Trident/.test(ua) && !/NT 10/.test(ua) ) {
+        var idMatch = url.match(/\/\/(.+?)\/(.+?)\/(.+?)\/(.+?)/);
+        if (!idMatch) return false;
+        var movieId = idMatch[3];
+        movieId = movieId.replace(/\.ism/,'');
+        movieId = movieId.substr(0,32);
+        var source = "/data/movie/" + movieId + ".mp4";
+        var sourceTag = "<source src=\"" + source + "\" type=\"video/mp4\"/>";
+        $('video').append(sourceTag)
+      } else {
+        var player = dashjs.MediaPlayer().create();
+        player.initialize(document.querySelector("#videoPlayer"), url, false);
+      }
+    }
+
+    function changeCareerSheet() {
+                var entryNumber = $('#selectedCandidate').find('option:selected').val();
+                var data = {
+		            "entryNumber": entryNumber,
+                    "template" : "entry/progress/forward"
+                };
+        ECAREER_COMPANY.asyncRequest({
+		    type: 'GET',
+		    url: "/entry/careersheet",
+		    data: data,
+		    scriptCharset: 'utf-8',
+		    contentType: 'application/json; charset=utf-8',
+		    dataType: 'html'
+	        }).done(function(data){
+	        　$('#resultBox').html(data);
+	    })
+
+	    ECAREER_COMPANY.asyncRequest({
+		    type: 'GET',
+		    url: "/entry/mail/history",
+		    data: data,
+		    scriptCharset: 'utf-8',
+		    contentType: 'application/json; charset=utf-8',
+		    dataType: 'html'
+	        }).done(function(data){
+	          $('#resultMail').html(data);
+	     })
+	}
+
+});
+
+
+$(function() {
+
+    $('#templateButton').click(decided);
+
+    function decided() {
+
+        var templateNumber = $('#templateSelect').find('option:selected').val();
+        var data = {
+		            "templateNumber": templateNumber,
+                };
+
+        ECAREER_COMPANY.asyncRequest({
+		    type: 'GET',
+		    url: "/entry/mail/template",
+		    data: data,
+		    scriptCharset: 'utf-8',
+		    contentType: 'application/json; charset=utf-8',
+		    dataType: 'json'
+	        }).done(function(data){
+                $('#subject').val(data.subject.value);
+                $('#content').val(data.body.value);
+
+                $('[data-remodal-id=overWrite]').remodal().close();
+	        })
+	}
+});
+
+function resetForm() {
+    document.getElementById("form").reset();
+    $('[data-remodal-id=promptReset]').remodal().close();
+    }
+
+function openModal() {
+    var selectedId = $('#templateSelect').find('option:selected').val();
+    if (selectedId == "0") return false;
+    $('[data-remodal-id=overWrite]').remodal().open();
+}
+
+    /*<![CDATA[*/
+
+    $(document).on('click', '#submitData', function () {
+        $("#form").submit();
+    });
+
+    /*]]>*/
+
+    $(document).on('click', '#forwardbutton', function () {
+        var selectedText = $('.processFunciton option:selected').text();
+        $('#confirmsentence').text('メールを送らずに選考を' + selectedText + 'に進めます。よろしいですか？' );
+    });
+
+	$(document).on('click', '#forward', function() {
+      $('#form').attr('action', $('#forwardUrl').text());
+      $('#form').attr('onclick', '');
+      $('#form').submit();
+	});
+
+    $(document).on('click', '#forwardOpenEmail', function () {
+        var selectedText = $('.processFunciton option:selected').text();
+        $('#confirmsentence').text('メールを送らずに選考を' + selectedText + 'に進めます。よろしいですか？' );
+    });
+
+    $('#progressSelect').change( function() {
+        var selectedProgress = $('option:selected',this).text()
+        $('#selectedProgress').text(selectedProgress)
+    });
+
+    $(document).on('submit', '#form', function() {
+        $('#forward').attr('disabled', 'disabled');
+    });
+
+
+</script>
+
+</body>
+</html>

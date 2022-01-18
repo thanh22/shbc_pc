@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* This file must be loaded AFTER remodal.css */
+
+.remodal-overlay { background-color:rgba(0, 0, 0, 0.7); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000,endColorstr=#B2000000);
+}
+
+
+/* 親要素の .remodal-wrapper に (remodal.css で) 設定されている text-align: center; を打ち消すため */
+.remodal {
+  text-align: start;
+}
+
+
+.remodal-overlay.remodal-is-opening {
+  animation-name: remodal-overlay-opening-keyframes;
+  animation-duration: 0.5s;
+}
+
+.remodal-overlay.remodal-is-closing {
+  animation-name: remodal-overlay-closing-keyframes;
+  animation-duration: 0.5s;
+}
+
+
+.remodal.remodal-is-opening {
+  animation-name: remodal-opening-keyframes;
+  animation-duration: 0.5s;
+}
+
+.remodal.remodal-is-closing {
+  animation-name: remodal-closing-keyframes;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes remodal-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+

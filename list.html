@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>応募者一覧</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!--[if lt IE 9]>
+<script src="./lib/html5shiv.js"></script>
+<script src="./lib/selectivizr-min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/ie8.css">
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="./css/styles.css?2201121647">
+<link rel="stylesheet" type="text/css" href="./css_b/styles_b.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">
+var ua = navigator.userAgent;
+var getDevice = (function(){
+if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+document.write('<meta name="viewport" content="width=device-width">');
+}else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+document.write('<meta name="viewport" content="width=1200, user-scalable=no, maximum-scale=1.0">');}
+else{
+document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">');}
+})();
+</script>
+<meta name="_csrf_header" content="X-CSRF-TOKEN">
+<meta name="_server_context_path" content="/" />
+<!-- TODO リンクを無効化するスタイルの定義はここで良いか判断してもらう -->
+<style>
+  .disable-link {
+    pointer-events: none;
+    cursor: default;
+    color: #bebebe;
+  }
+</style>
+
+
+</head>
+
+<body class="pubInfo" data-active-nav="04" data-current-nav="04-01">
+<div id="wrapper">
+  <header id="siteHeader">
+<div id="siteID"><a href="./"><img src="./img/siteID.png" width="170" height="30" alt="イーキャリア"></a>採用ご担当者様ページ</div>
+  <div class="user">株式会社エージェントソフトウェア　(<span id="companyCode">X0000000003</span>)　伊藤 和子様</div>
+<a href="javascript: document.logoutForm.submit()" class="logout">ログアウト</a>
+<form name="logoutForm" action="/logout" method="post"><input type="hidden" name="_csrf" value="a340869a-9b3d-41c0-b7ef-061438e392d2"/>
+  <input hidden type="submit" value="Sign Out"/>
+</form>
+</header>
+
+
+  <div id="container">
+    <main id="pageBody">
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="./entry">応募者管理</a></li>
+          <li><span>応募者一覧</span></li>
+        </ul>
+      </div>
+      <header class="pageBodyHeader">
+        <h1>応募者一覧</h1>
+      </header>
+
+      <article class="applicant">
+        <form id="entryListForm" method="post" action="dummy"><input type="hidden" name="_csrf" value="a340869a-9b3d-41c0-b7ef-061438e392d2"/>
+          <p>貴社への応募者の一覧です。応募者ごとに選考状況や評価を管理することができます。 <br>
+            またWebメールを利用して複数の応募者に一括で連絡することもできます。
+          </p>
+
+          <section>
+            
+              <div class="errMsg">
+                <ul>
+                  <li>未対応の応募者がいます。選考状況を入力してください。</li>
+                  
+                </ul>
+              </div>
+            
+              <div class="status-interview">
+                <div class="title-status-interview">
+                  以下の求職者について、面接実施状況を教えてください。
+                </div>
+                <div class="content-status-interview">
+                  <div class="row-content-status-interview">
+                    <div style="padding-left: 15px;padding-right: 15px;font-weight:bold;color: #2d52f7;">佐藤  和美</div>
+                    <div style="font-size:10px;font-weight:bold;margin-right:40px;">（男性・22歳）</div>
+                    <div style="font-weight:bold;margin-right: 135px;">面接日：2021.10.25　20:00~</div>
+                    <button class="btn-carried-out">実施した</button>
+                    <button type="button" class="btn-not-performed" onclick="openModal()">実施していない</button>
+                  </div>
+                  <div class="row-content-status-interview">
+                    <div style="padding-left: 15px;padding-right: 15px;font-weight:bold;color: #2d52f7;">佐藤  和美</div>
+                    <div style="font-size:10px;font-weight:bold;margin-right:40px;">（男性・22歳）</div>
+                    <div style="font-weight:bold;margin-right: 135px;">面接日：2021.10.25　20:00~</div>
+                    <button class="btn-carried-out">実施した</button>
+                    <button type="button" class="btn-not-performed" onclick="openModal()">実施していない</button>
+                  </div>
+                  <div class="row-content-status-interview">
+                    <div style="padding-left: 15px;padding-right: 15px;font-weight:bold;color: #2d52f7;">佐藤  和美</div>
+                    <div style="font-size:10px;font-weight:bold;margin-right:40px;">（男性・22歳）</div>
+                    <div style="font-weight:bold;margin-right: 135px;">面接日：2021.10.25　20:00~</div>
+                    <button class="btn-carried-out">実施した</button>
+                    <button type="button" class="btn-not-performed" onclick="openModal()">実施していない</button>
+                  </div>
+                  
+                </div>
+              </div>
+
+            <ul class="tabsNav">
+              
+                <li>
+                  <span>未対応<i>5</i></span>
+                </li>
+                
+              
+                
+                <li>
+                  <a href="./entry/list/2">
+                    書類選考
+                    <i>2</i>
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a href="./entry/list/3">
+                    面接中
+                    <i>1</i>
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a href="./entry/list/4">
+                    オファー
+                    <i>1</i>
+                  </a>
+                </li>
+              
+                
+                <li>
+                  <a href="./entry/list/5">
+                    入社
+                    <i>2</i>
+                  </a>
+                </li>
+              
+            </ul>
+
+
+            
+              
+            
+
+            <table class="listTable tablesorter applicant">
+              <thead>
+                <tr>
+                  <th><label><input type="checkbox" class="selectAll"></label></th>
+                  <th class="header headerSort">
+                    
+                    <a href="?sort=asc" class="descend">↓応募日時</a>
+                  </th>
+                  <th>応募者情報</th>
+                  <th>応募内容</th>
+                  <th>評価／メモ</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="rel" value="10008" id="entryNumbers.list1" name="entryNumbers.list"><input type="hidden" name="_entryNumbers.list" value="on"/>
+                  </td>
+                  <td class="ct">
+                    
+                    2022/01/11<br>11:25
+                  </td>
+                  <td>
+                    
+                    <p>
+                      会員No. 1745976
+                    </p>
+                    <p class="ruby">
+                      ワダ アキコ
+                    </p>
+
+                    <a href="./entry/list/10008/candidate"
+                         style="font-size: 12pt;">和田 アキ子</a>
+                    <p>
+                    （男性・65歳）
+                    </p>
+
+
+                    <p><i class="appScout">スカウトへの応募</i></p>
+                    
+                    
+                      
+                    
+                    <p >
+                      
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p class="jobInf">
+                      <a target="_blank" href="./preview/snapshot/position/10008">AI部</a>
+                    </p>
+                    <p class="carrerSheet">
+                      <a href="./entry/10008/careersheet" target="_blank">キャリアシートを見る</a>
+                    </p>
+                    <p class="mailHistory">
+                      <a href="./entry/list/10008/mail">メール履歴を見る</a>
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p>B</p>
+                    <br>
+                    <p>メモその18</p>
+                  </td>
+                  <td class="btns">
+                    <div>
+                      <input type="submit" class="btn action single" value="個別で対応する" formaction="/entry/list/10008"/>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="rel" value="10004" id="entryNumbers.list2" name="entryNumbers.list"><input type="hidden" name="_entryNumbers.list" value="on"/>
+                  </td>
+                  <td class="ct">
+                    
+                    2022/01/07<br>11:25
+                  </td>
+                  <td>
+                    <p class="applicant">
+                      <em class="new">NEW</em>
+                    </p>
+                    <p>
+                      会員No. 1745976
+                    </p>
+                    <p class="ruby">
+                      ワダ アキコ
+                    </p>
+
+                    <a href="./entry/list/10004/candidate"
+                         style="font-size: 12pt;">和田 アキ子</a>
+                    <p>
+                    （男性・65歳）
+                    </p>
+
+
+                    
+                    
+                    
+                      
+                    
+                    <p >
+                      
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p class="jobInf">
+                      <a target="_blank" href="./preview/snapshot/position/10004">林檎部</a>
+                    </p>
+                    <p class="carrerSheet">
+                      <a href="./entry/10004/careersheet" target="_blank">キャリアシートを見る</a>
+                    </p>
+                    <p class="mailHistory">
+                      <a href="./entry/list/10004/mail">メール履歴を見る</a>
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p>B</p>
+                    <br>
+                    <p>メモその14</p>
+                  </td>
+                  <td class="btns">
+                    <div>
+                      <input type="submit" class="btn action single" value="個別で対応する" formaction="/entry/list/10004"/>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="rel" value="10009" id="entryNumbers.list3" name="entryNumbers.list"><input type="hidden" name="_entryNumbers.list" value="on"/>
+                  </td>
+                  <td class="ct">
+                    
+                    2022/01/04<br>11:25
+                  </td>
+                  <td>
+                    <p class="applicant">
+                      <em class="new">NEW</em>
+                    </p>
+                    <p>
+                      会員No. 1745976
+                    </p>
+                    <p class="ruby">
+                      ワダ アキコ
+                    </p>
+
+                    <a href="./entry/list/10009/candidate"
+                         style="font-size: 12pt;">和田 アキ子</a>
+                    <p>
+                    （男性・65歳）
+                    </p>
+
+
+                    
+                    <p><i class="appSpecialScout">特別スカウトへの応募</i></p>
+                    
+                      
+                    
+                    <p >
+                      
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p class="jobInf">
+                      <a target="_blank" href="./preview/snapshot/nonpublic/10009">非公開求人100</a>
+                    </p>
+                    <p class="carrerSheet">
+                      <a href="./entry/10009/careersheet" target="_blank">キャリアシートを見る</a>
+                    </p>
+                    <p class="mailHistory">
+                      <a href="./entry/list/10009/mail">メール履歴を見る</a>
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p>B</p>
+                    <br>
+                    <p>メモその19</p>
+                  </td>
+                  <td class="btns">
+                    <div>
+                      <input type="submit" class="btn action single" value="個別で対応する" formaction="/entry/list/10009"/>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="rel" value="10003" id="entryNumbers.list4" name="entryNumbers.list"><input type="hidden" name="_entryNumbers.list" value="on"/>
+                  </td>
+                  <td class="ct">
+                    
+                    2022/01/02<br>11:25
+                  </td>
+                  <td>
+                    <p class="applicant">
+                      <em class="new">NEW</em>
+                    </p>
+                    <p>
+                      会員No. 1745976
+                    </p>
+                    <p class="ruby">
+                      ワダ アキコ
+                    </p>
+
+                    <a href="./entry/list/10003/candidate"
+                         style="font-size: 12pt;">和田 アキ子</a>
+                    <p>
+                    （男性・65歳）
+                    </p>
+
+
+                    
+                    
+                    
+                      
+                    
+                    <p >
+                      
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p class="jobInf">
+                      <a target="_blank" href="./preview/snapshot/position/10003">金融第三事業部</a>
+                    </p>
+                    <p class="carrerSheet">
+                      <a href="./entry/10003/careersheet" target="_blank">キャリアシートを見る</a>
+                    </p>
+                    <p class="mailHistory">
+                      <a href="./entry/list/10003/mail">メール履歴を見る</a>
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p>A</p>
+                    <br>
+                    <p>メモその10</p>
+                  </td>
+                  <td class="btns">
+                    <div>
+                      <input type="submit" class="btn action single" value="個別で対応する" formaction="/entry/list/10003"/>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" class="rel" value="10000" id="entryNumbers.list5" name="entryNumbers.list"><input type="hidden" name="_entryNumbers.list" value="on"/>
+                  </td>
+                  <td class="ct">
+                    
+                    2021/12/31<br>11:25
+                  </td>
+                  <td>
+                    <p class="applicant">
+                      <em class="new">NEW</em>
+                    </p>
+                    <p>
+                      会員No. 1745975
+                    </p>
+                    <p class="ruby">
+                      ワダ ユキコ
+                    </p>
+
+                    <a href="./entry/list/10000/candidate"
+                         style="font-size: 12pt;">和田 由紀子</a>
+                    <p>
+                    （女性・45歳）
+                    </p>
+
+
+                    
+                    
+                    
+                      
+                    
+                    <p >
+                      
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p class="jobInf">
+                      <a target="_blank" href="./preview/snapshot/position/10000">マネージャ募集</a>
+                    </p>
+                    <p class="carrerSheet">
+                      <a href="./entry/10000/careersheet" target="_blank">キャリアシートを見る</a>
+                    </p>
+                    <p class="mailHistory">
+                      <a href="./entry/list/10000/mail">メール履歴を見る</a>
+                      
+                    </p>
+                  </td>
+                  <td>
+                    <p>A</p>
+                    <br>
+                    <p>メモその1</p>
+                  </td>
+                  <td class="btns">
+                    <div>
+                      <input type="submit" class="btn action single" value="個別で対応する" formaction="/entry/list/10000"/>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            
+              
+            
+
+            <div class="btnSpace applicantTable function">
+              
+                <input type="submit" class="btn action selected" value="選択した応募者に一括で対応する" formaction="/entry/list/multi-action"/>
+              
+              <input type="submit" class="btn save" formaction="/entry/list/download"  value="未対応一覧をダウンロードする"  />
+            </div>
+          </section>
+        </form>
+      </article>
+
+      <!--// #pageBody --></main>
+
+    <aside id="siteAside">
+  <header>
+    <dl>
+      <dt>ご契約期間</dt>
+      <dd>2017/01/11 〜 2017/04/04</dd>
+    </dl>
+  </header>
+  <nav>
+    <ul>
+      <li class="home" data-nav-index="01"><a href="./">管理者トップ</a></li>
+
+      <li class="pubInfo" data-nav-index="02">
+        <a href="./nonpublic">掲載情報管理</a>
+        <ul>
+          
+          
+          <li data-nav-index="02-03"><a href="./nonpublic">非公開求人情報設定</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="applicant" data-nav-index="04">
+        <a href="./entry">応募者管理<i></i></a>
+        <ul>
+          <li data-nav-index="04-01"><a href="./entry/list">応募者一覧</a></li>
+          <li data-nav-index="04-04"><a href="./entry/search">応募者名検索</a></li>
+          <li data-nav-index="04-02"><a href="./entry/closed">選考終了一覧</a></li>
+          <li data-nav-index="04-03"><a href="./entry/recruiting">採用選考状況</a></li>
+        </ul>
+      </li>
+
+      <li class="scout" data-nav-index="05">
+        <a href="./scout">スカウト</a>
+        <ul>
+          <li data-nav-index="05-01"><a href="./scout/condition/init">検索条件設定</a></li>
+          <li data-nav-index="05-02"><a href="./scout/condition/list">保存条件一覧</a></li>
+          <li data-nav-index="05-03">
+            <a href="./scout/bookmark">ブックマーク</a>
+          </li>
+          
+          <li data-nav-index="05-05"><a href="./scout/mails">送信済みスカウト検索</a></li>
+        </ul>
+      </li>
+      <li class="performance" data-nav-index="06"><a href="./performance/week">パフォーマンスデータ</a>
+        <ul>
+          <li data-nav-index="06-01"><a href="./performance/week">週間レポート</a></li>
+          <li data-nav-index="06-02"><a href="./performance/month">月間レポート</a></li>
+        </ul>
+      </li>
+      <li class="setting" data-nav-index="07"><a href="./configuration">各種設定</a>
+        <ul>
+          <li data-nav-index="07-01"><a href="./configuration/template">メールテンプレート一覧</a></li>
+          <li data-nav-index="07-02">
+            <a href="./configuration/editoraccount/request">原稿制作アカウント発行</a></li>
+          <li data-nav-index="07-03"><a href="./configuration/password/edit">管理者パスワード変更</a>
+          </li>
+          <li data-nav-index="07-04">
+            <a href="./configuration/notification">通知先メールアドレス設定</a></li>
+          <li data-nav-index="07-05">
+            <a href="./configuration/assessment">評価の設定</a></li>
+          <li data-nav-index="07-06"><a href="./configuration/entry">重複応募の設定</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="banner"><a href="./questionnaire">企業アンケートにご協力ください</a></div>
+
+    <a href="./company#a04" class="bannerOnlineInterview disable">
+      <div class="text_1">無料（時間制限なし）</div>
+      <div class="text_2">WEB面接機能<span> が使えます</span></div>
+      <div class="text_3">チェックするだけ 設定はこちら</div>
+    </a>
+
+    
+
+  </nav>
+</aside>
+
+  </div>
+  <!--// #container --><!--</div>-->
+<footer id="siteFooter">
+  <div class="inner">
+    <dl>
+      <dt>お問い合わせ</dt>
+      <dd>イーキャリア事務局 受付時間：9:30～15:00（土日祝を除く）<br>
+        誠に恐れ入りますが、上記時間外のお問い合わせは、営業担当までお願いいたします<br>
+        電話番号：0120-231049 / 03-5549-1275
+        <small>※迅速な対応のため、企業名・ご担当者名をお知らせください。</small>
+      </dd>
+      <dt>マニュアル</dt>
+      <dd class="manualLink">
+        <a href="./manual/ecareer-manual_position.pdf" target="_blank">掲載情報管理編　<i>(PDF形式、11.4MB)</i></a>
+        <a href="./manual/ecareer-manual_configuration.pdf" target="_blank">各種設定編　<i>(PDF形式、1.8MB)</i></a>
+        <a href="./manual/ecareer-manual_scout.pdf" target="_blank">スカウト編　<i>(PDF形式、7.3MB)</i></a>
+        <a href="./manual/ecareer-manual_entry-management.pdf" target="_blank">応募者管理編　<i>(PDF形式、6.6MB)</i></a>
+        <a href="./manual/ecareer-manual_online_interview.pdf" target="_blank">WEB面接編　<i>(PDF形式、2.2MB)</i></a>
+      </dd>
+      <dt>原稿制作</dt>
+      <dd class="manualLink">
+        <a href="./manual/ecareer-guidebook.pdf" target="_blank">原稿制作ガイドブック<i>(PDF形式、463KB)</i></a>
+      </dd>
+    </dl>
+    <div class="contact">
+      <a id="invokeMailer" href="#" class="btn contact invokeMailer">お問い合わせ
+        <small>メーラーが起動します</small>
+      </a>
+    </div>
+    <div id="corpInfo">
+      <b><img src="./img/corpLogo.png" width="149" height="21" alt="SB Human Capital"></b>
+      <small>COPYRIGHT &copy; SB Human Capital Corp. All Rights Reserved.</small>
+    </div>
+  </div>
+  <a href="#wrapper" class="pgTop">ページトップへ</a>
+</footer>
+
+<!-- The Modal -->
+<div id="myModal" class="modal-status-interview">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div style="text-align: center;font-weight: bold;color: #6e6e6e;margin-bottom:20px;font-size: 17px;">この求職者からの連絡の有無を教えてください</div>
+    <div style="background:#fcc7dc;margin-bottom:20px;padding: 10px 15px;width: 350px;margin: auto;">
+      <span style="color: #2d52f7;margin-right:5px;font-weight: bold;">佐藤  和美　</span><span style="font-size: 10px;">（男性・22歳）</span>
+      <div style="font-weight: bold;color: #515151;">
+        面接日：2021.10.25　20:00～
+      </div>
+    </div>
+    <div style="display: flex;justify-content: center;margin-top: 20px;margin-bottom: 10px;">
+      <button class="btn-contacted">連絡があった</button>
+      <button class="btn-not-contacted">連絡はなかった</button>
+    </div>
+    <!-- <span class="close">&times;</span> -->
+  </div>
+
+</div>
+<!--// #wrapper --><!--</div>-->
+</div>
+<script src="./webjars/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/component/ec_components.js"></script>
+<script src="./js/script_common/ajax_settings.js"></script>
+<script src="./js/ecareer_company.js"></script>
+<script src="./js/component/invokeMailer.js"></script>
+<!--[if lt IE 9]>
+<script>$('body').addClass('ie8');</script>
+<script src="./js/ie8.js"></script>
+<![endif]-->
+
+<script>
+$('.selected').on('click',function(){
+    if($('.rel').is(':checked')==false) {
+     alert("応募者を選択してください。");
+     return false;
+    }
+});
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("btn-not-performed-1");
+var btn2 = document.getElementById("btn-not-performed-2");
+var btn3 = document.getElementById("btn-not-performed-3");
+// Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
