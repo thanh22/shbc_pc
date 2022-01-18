@@ -78,6 +78,19 @@ body.aboutApplication #container { background: none; }
 
 body.aboutApplication #pageBody { width: 100%; float: none; }
 
+.d-flex {
+	display: flex;
+}
+.align-center {
+	align-items: center;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-space-between {
+	justify-content: space-between;
+}
+
 #siteID { white-space: nowrap; }
 
 #siteHeader .user { margin-left: auto; padding: 0 30px 0 10px; }

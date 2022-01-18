@@ -1,0 +1,33 @@
+.schedule-presentation .inform-interview a {
+    color: #0C6596;
+}
+.schedule-presentation .inform-interview a::before {
+    content: '\e907';
+    font-size: 20px !important;
+    top: -2px !important;
+    color: #0B6596;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 10px;
+}
+
+.schedule-presentation .career-sheet::before {
+    content: '\f08e';
+    top: 1px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+} 
+.schedule-presentation .schedule-for-interview a::before {
+    content: '\f073';
+    font-family: ecicons;
+    margin-right: 10px;
+    color: #21BBFB;
+    vertical-align: middle;
+    position: relative;
+    font-size: 18px;
+}
