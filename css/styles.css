@@ -90,6 +90,12 @@ body.aboutApplication #pageBody { width: 100%; float: none; }
 .justify-space-between {
 	justify-content: space-between;
 }
+.justify-end {
+	justify-content: end;
+}
+.flex-column {
+	flex-direction: column;
+}
 
 #siteID { white-space: nowrap; }
 

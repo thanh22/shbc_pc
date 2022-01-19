@@ -23,11 +23,115 @@
     position: relative;
 } 
 .schedule-presentation .schedule-for-interview a::before {
-    content: '\f073';
+    content: '\f15c';
     font-family: ecicons;
     margin-right: 10px;
     color: #21BBFB;
     vertical-align: middle;
     position: relative;
     font-size: 18px;
+}
+
+.btn-send-candidate-interview {
+    border-color: #3181b4;
+    background: linear-gradient(to bottom, #51c8ff 0%, #1ab6ff 100%) !important;
+    width: auto;
+    padding: 0 20px;
+}
+.btn-send-candidate-interview::before {
+    content: '\e932';
+    display: inline-block;
+    font-family: ecicons;
+    margin-right: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+}
+
+.background-btn-earth {
+    background: linear-gradient(to bottom, #bcb693 0%, #b0a980 100%) !important;
+    border-color: #837b4c;
+    border-radius: 5px;
+}
+.btn-do-it-online {
+    width: 171px;
+    height: 40px;
+}
+.btn-select-location {
+    width: 171px;
+    height: 40px;
+}
+
+.text-area-message {
+    width: 625px;height: 134px;padding: 14px 25px 67px 16px; resize: none;border-radius: 2px;margin-left:80px
+}
+
+.return-applicant-list {
+    background: linear-gradient(to bottom, #a6a6a6 0%, #878787 100%) !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 30px;
+    border-color: #666;
+}
+
+.clock-left .icon-times::before {
+    content: '\f06a';
+    display: inline-block;
+    font-family: ecicons;
+    margin-right: 10px;
+    font-size: 30px;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    color: #ffffff;
+}   
+
+.clock-right .item-clock {
+    margin-bottom: 5px;
+}
+.icon-trash::before {
+    content: '\f12d';
+    display: inline-block;
+    font-family: ecicons;
+    margin-right: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    color: #ffffff;
+}
+
+.input-chose-time {
+    width: 82px !important;
+    height: 40px;
+    border-radius: 2px !important;
+}
+.input-chose-date {
+    width: 162px !important;
+    height: 40px;
+    border-radius: 2px !important;
+}
+
+.row-title-schedule span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #21BBFB;
+}
+
+.row-title-schedule span::before {
+    content: '\f15c';
+    font-family: ecicons;
+    margin-right: 10px;
+    color: #21BBFB;
+    vertical-align: middle;
+    position: relative;
+    font-size: 18px;
+    top: -4px;
+}
+
+.content-add-schedule {
+    padding: 10px 20px;
+    background: #00BBFD;
+    border-radius: 5px;
 }
