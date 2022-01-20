@@ -119,7 +119,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                               </div>
                               <div class="d-flex">
                                 <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">17時〜19時</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;" class="show-area-chose-time">17時〜19時</div>
                                 <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
                                 <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
                               </div>
@@ -175,7 +175,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                               </div>
                               <div class="d-flex">
                                 <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">17時〜19時</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;" class="show-area-chose-time">17時〜19時</div>
                                 <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
                                 <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
                               </div>
@@ -231,7 +231,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                               </div>
                               <div class="d-flex">
                                 <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">17時〜19時</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;"  class="show-area-chose-time">17時〜19時</div>
                                 <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
                                 <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
                               </div>
@@ -286,7 +286,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                               </div>
                               <div class="d-flex">
                                 <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">17時〜19時</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;" class="show-area-chose-time">17時〜19時</div>
                                 <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
                                 <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
                               </div>
@@ -365,7 +365,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                     </div>
                 </div>
             </div>
-            <div style="background: #E2F5FF;margin-top: 30px; opacity: 50%;padding: 30px 0;">
+            <div class="area-suggested-candidate" style="background: #E2F5FF;margin-top: 30px; opacity: 50%;padding: 30px 0;">
               <div style="font-size: 16px;
                           font-weight: bold;color: #666666;
                           border-top: #21BBFB 2px dashed;
@@ -374,7 +374,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                           margin: 0 auto;
               " class="d-flex align-center">
                 <span style="margin-right: 50px;">提案する面接候補日</span>  
-                <div>
+                <div class="suggested-interview-candidate-date" style="display: none;">
                   <div class="d-flex align-center">
                     <div style="width: 27px;height: 27px;background: #21BAFB;color: #ffffff;border-radius: 50%;font-size: 18px;text-align: center;margin-right: 10px;">1</div>
                     <div style="margin-right: 20px;">
@@ -396,15 +396,58 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                   </div>
                 </div>
               </div>
-              <div style="padding: 20px 0;border-bottom:dashed #21bbfb 2px;width: 625px;margin: 0 auto;">
-                <span style="font-size: 16px;font-weight: bold;color: #666666;margin-right: 65px;">面接場所（任意）</span>
-                <button class="btn-select-location background-btn-earth">
-                  <span style="font-size: 16px;font-weight: bold;">場所を選択する</span>
-                </button>
-                <button class="btn-do-it-online background-btn-earth">
-                  <span style="font-size: 16px;font-weight: bold;">オンラインで行う</span>
-                </button>
+              <div class="d-flex" style="padding: 20px 0;border-bottom:dashed #21bbfb 2px;width: 625px;margin: 0 auto;">
+                <span style="font-size: 16px;font-weight: bold;color: #666666;margin-right: 55px;margin-top:6px">面接場所（任意）</span>
+                <div class="area-button-suggest">
+                  <button class="btn-select-location background-btn-earth">
+                    <span style="font-size: 16px;font-weight: bold;">場所を選択する</span>
+                  </button>
+                  <button class="btn-do-it-online background-btn-earth">
+                    <span style="font-size: 16px;font-weight: bold;">オンラインで行う</span>
+                  </button>
+                </div>
+                <div class="area-input-suggest" style="display: none;">
+                  <input type="text" placeholder="URLを入力してください" style="width: 438px;height: 40px;">
+                  <div style="color: #0C6596;margin-top: 15px;" class="d-flex align-center">
+                    <div style="cursor: pointer;margin-right:25px" class="text-select-location">
+                      <span style="font-size: 14px;margin-right: 5px;font-weight: bold;">></span><span>面接場所を選択する</span>
+                    </div>
+                    <div style="cursor: pointer;" class="enter-interview-location">
+                      <span style="font-size: 14px;margin-right: 5px;font-weight: bold;">></span><span>面接場所を入力する</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="area-input-information" style="display: none;">
+                  <div>
+                    <input type="text" placeholder="面接場所 名称" style="width: 438px;height:40px;padding-left: 15px;">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="住所を入力してください" style="width: 438px;height:40px;padding-left: 15px;">
+                  </div>
+                  <div style="cursor: pointer;color: #0C6596;" class="d-flex justify-end">
+                    <span style="font-size: 14px;margin-right: 5px;font-weight: bold;">></span><span style="font-weight: bold;">登録済みの面接地から選択する</span>
+                  </div>
+                </div>
+
+                <div class="area-result-location" style="width: 438px;display: none;">
+                  <div class="d-flex justify-space-between">
+                    <div>
+                      <span style="color:#21BAFB;font-size:20px;">新宿本社</span>
+                    </div>
+                    
+                    <div>
+                      <span class="icon-pencil"></span>
+                      <span class="icon-trash" style="color: #B2B2B2;"></span>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="icon-map"></span>
+                    <span style="color:#0C6596;">東京都新宿区新宿７丁目２７−１９</span>
+                  </div>
+                </div>
               </div>
+
               <div class="d-flex justify-center" style="margin-top: 30px;">
                 <textarea name="" id="" class="text-area-message"
                     placeholder="当日の持ち物など、面接候補日の他に送りたいメッセージがありましたら、入力してください。"></textarea>
@@ -517,7 +560,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
   <!-- Modal content -->
   <div class="modal-content">
     <div class="d-flex align-center">
-      <div style="width: 19px;height: 35px;background: #999999; margin-right: 10px;"></div>
+      <div class="polygon"></div>
       <span style="font-size:18px; color:#000000">面接場所を選択する</span>
     </div>
 
@@ -565,9 +608,8 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
     </div>
 
     <div style="margin-top: 20px;margin-bottom: 10px;" class="d-flex justify-center">
-      <button class="btn-add-new-preview" style="background: linear-gradient(to bottom, #bcb693 0%, #b0a980 100%) !important;border-color: #837A51;border-radius: 5px;width: 205px;">新しい面接地を追加する</button>
-      <button class="btn-decide" style="border-color: #21BAFB;width: 205px;margin-left: 10px;
-      background: linear-gradient(to bottom, #51c8ff 0%, #1ab6ff 100%) !important;">決定する</button>
+      <button class="btn-add-new-preview">新しい面接地を追加する</button>
+      <button class="btn-decide">決定する</button>
     </div>
     <!-- <span class="close">&times;</span> -->
   </div>
@@ -598,11 +640,16 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
   $(document).ready(function(){
     $('.input-checkbox').change(function() {
       if (this.checked) {
-        $(this).parent().parent().parent().find('.area-chose-time').show();
+        
       } else {
         $(this).parent().parent().parent().find('.area-chose-time').hide();
       }
     });
+    
+    $('.show-area-chose-time').click(function() {
+      $(this).parent().parent().parent().find('.area-chose-time').show();
+      $(this).parent().parent().find('.input-checkbox').prop('checked', true);
+    })
 
     $('.btn-add-new-schedule').click(function() {
       $('.add-schedule').show();
@@ -611,6 +658,30 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
     $('.btn-select-location').click(function() {
       $('.modal-select-interview-location').show();
     });
+    $('.text-select-location').click(function() {
+      $('.modal-select-interview-location').show();
+    });
+
+    $('.enter-interview-location').click(function() {
+      $('.area-input-information').show();
+      $('.area-button-suggest').hide();
+      $('.area-input-suggest').hide();
+    });
+
+    $('.btn-do-it-online').click(function() {
+      $('.suggested-interview-candidate-date').show();
+      $('.area-suggested-candidate').css("opacity","unset");
+      $('.area-button-suggest').hide();
+      $('.area-input-suggest').show();
+    });
+
+    // $('.btn-decide').click(function() {
+    //   $('.suggested-interview-candidate-date').show();
+    //   $('.area-suggested-candidate').css("opacity","unset");
+    //   $('.area-button-suggest').hide();
+    //   $('.area-result-location').show();
+    // })
+    
     
     var modal = document.getElementById("myModal");
     window.onclick = function(event) {
@@ -618,6 +689,24 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
         modal.style.display = "none";
       }
     }
+
+    $('.btn-add-new-preview').click(function() {
+      $('.suggested-interview-candidate-date').show();
+      $('.area-input-information').show();
+      $('.area-button-suggest').hide();
+      $('.area-input-suggest').hide();
+      $('.area-suggested-candidate').css("opacity","unset");
+      modal.style.display = "none";
+    });
+
+    $('.btn-decide').click(function() {
+      $('.suggested-interview-candidate-date').show();
+      $('.area-suggested-candidate').css("opacity","unset");
+      $('.area-button-suggest').hide();
+      $('.area-result-location').show();
+      $('.area-input-suggest').hide();
+      modal.style.display = "none";
+    });
   })
 
 </script>
