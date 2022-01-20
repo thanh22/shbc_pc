@@ -1,0 +1,44 @@
+
+.inform-interview a {
+    color: #0C6596;
+}
+.inform-interview a::before {
+    content: '\e907';
+    font-size: 20px !important;
+    top: -2px !important;
+    color: #0B6596;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 10px;
+}
+
+.career-sheet::before {
+    content: '\f08e';
+    top: 1px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+} 
+
+.icon-map::before {
+    content: '\e90c';
+    display: inline-block;
+    font-family: ecicons;
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    color: #3AA1DE;
+}
+.return-applicant-list {
+    background: linear-gradient(to bottom, #a6a6a6 0%, #878787 100%) !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 30px;
+    border-color: #666;
+}
