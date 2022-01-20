@@ -114,13 +114,15 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                           <div class="item-time-interview" style="padding:12px 0;border-bottom:1px dashed">
                             <div class="d-flex align-center justify-space-between">
                               <div>
-                                <input class="input-checkbox" type="checkbox" style="width: 15px;height:15px;margin-right: 15px;color: #707070;">
-                                <span style="font-size:16px; color:#666666;font-weight:bold;">2021年10月25日（月）</span>
+                                <label class="label-input-checkbox" style="font-size:16px; color:#666666;font-weight:bold;">2021年10月25日（月）
+                                  <input type="checkbox" class="input-checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
                               </div>
                               <div class="d-flex">
                                 <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;" class="show-area-chose-time">17時〜19時</div>
-                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;margin-right: 15px;" class="show-area-chose-time">17時〜19時</div>
+                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px 0 0;">|</div>
                                 <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
                               </div>
                             </div>
@@ -134,83 +136,27 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                                 </div>
                                 <div class="clock-right">
                                   <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
+                                    <input type="number" class="input-chose-time" value="17" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
+                                    <input type="number" class="input-chose-time" value="18" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span class="icon-trash" style="margin-left: 10px;"></span>
                                   </div>
                                   <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
+                                    <input type="number" class="input-chose-time" value="20" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
+                                    <input type="number" class="input-chose-time" value="21" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <span class="icon-trash" style="margin-left: 10px;"></span>
-                                  </div>
-                                  <div class="d-flex align-center justify-end">
-                                    <span style="font-size:24px;color:#ffffff;font-weight: bold;margin-right: 5px;">+</span>
-                                    <span style="color:#ffffff">時間を追加する</span>
-                                  </div>
-                                </div>
-                              </div>
-                              <span style="color: #00A53F;margin-left:80px">↑求職者が設定した時間以外は選択できない</span>
-                            </div>
-                          </div>
-
-                          <div class="item-time-interview" style="padding:12px 0;border-bottom:1px dashed">
-                            <div class="d-flex align-center justify-space-between">
-                              <div>
-                                <input class="input-checkbox" type="checkbox" style="width: 15px;height:15px;margin-right: 15px;color: #707070;">
-                                <span style="font-size:16px; color:#666666;font-weight:bold;">2021年10月25日（月）</span>
-                              </div>
-                              <div class="d-flex">
-                                <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;" class="show-area-chose-time">17時〜19時</div>
-                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
-                              </div>
-                            </div>
-                            <div class="d-flex justify-end area-chose-time flex-column" style="display: none;">
-                              <div class="d-flex" 
-                                 style="width: 691px;height: 150px;background: #00BBFD;border-radius: 5px;border: #707070 1px solid;padding: 10px 20px;margin-left: 60px;">
-                                <div class="clock-left d-flex" style="margin-right: 20px;">
-                                  <span class="icon-times"></span>
-                                  <div style="font-size: 16px; font-weight: bold;color: #ffffff;width: 65px;">提案する
-                                    面接時間</div>
-                                </div>
-                                <div class="clock-right">
-                                  <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <span class="icon-trash" style="margin-left: 10px;"></span>
-                                  </div>
-                                  <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span class="icon-trash" style="margin-left: 10px;"></span>
                                   </div>
                                   <div class="d-flex align-center justify-end">
@@ -226,13 +172,15 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                           <div class="item-time-interview" style="padding:12px 0;border-bottom:1px dashed">
                             <div class="d-flex align-center justify-space-between">
                               <div>
-                                <input class="input-checkbox" type="checkbox" style="width: 15px;height:15px;margin-right: 15px;color: #707070;">
-                                <span style="font-size:16px; color:#666666;font-weight:bold;">2021年10月25日（月）</span>
+                                <label class="label-input-checkbox" style="font-size:16px; color:#666666;font-weight:bold;">2021年10月26日（火）
+                                  <input type="checkbox" class="input-checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
                               </div>
                               <div class="d-flex">
                                 <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;"  class="show-area-chose-time">17時〜19時</div>
-                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;margin-right: 15px;" class="show-area-chose-time">17時〜19時</div>
+                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px 0 0;">|</div>
                                 <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
                               </div>
                             </div>
@@ -246,27 +194,87 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                                 </div>
                                 <div class="clock-right">
                                   <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
+                                    <input type="number" class="input-chose-time" value="17" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
+                                    <input type="number" class="input-chose-time" value="18" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span class="icon-trash" style="margin-left: 10px;"></span>
                                   </div>
                                   <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
+                                    <input type="number" class="input-chose-time" value="20" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
+                                    <input type="number" class="input-chose-time" value="21" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
+                                    <span class="icon-trash" style="margin-left: 10px;"></span>
+                                  </div>
+                                  <div class="d-flex align-center justify-end">
+                                    <span style="font-size:24px;color:#ffffff;font-weight: bold;margin-right: 5px;">+</span>
+                                    <span style="color:#ffffff">時間を追加する</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <span style="color: #00A53F;margin-left:80px">↑求職者が設定した時間以外は選択できない</span>
+                            </div>
+                          </div>
+
+                          <div class="item-time-interview" style="padding:12px 0;border-bottom:1px dashed">
+                            <div class="d-flex align-center justify-space-between">
+                              <div>
+                                <label class="label-input-checkbox" style="font-size:16px; color:#666666;font-weight:bold;">2021年10月28日（水）
+                                  <input type="checkbox" class="input-checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                              <div class="d-flex">
+                                <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;margin-right: 15px;"  class="show-area-chose-time">12時〜17時</div>
+                                <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;margin-right: 15px;"  class="show-area-chose-time">17時〜19時</div>
+                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px 0 0;">|</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
+                              </div>
+                            </div>
+                            <div class="d-flex justify-end area-chose-time flex-column" style="display: none;">
+                              <div class="d-flex" 
+                                 style="width: 691px;height: 150px;background: #00BBFD;border-radius: 5px;border: #707070 1px solid;padding: 10px 20px;margin-left: 60px;">
+                                <div class="clock-left d-flex" style="margin-right: 20px;">
+                                  <span class="icon-times"></span>
+                                  <div style="font-size: 16px; font-weight: bold;color: #ffffff;width: 65px;">提案する
+                                    面接時間</div>
+                                </div>
+                                <div class="clock-right">
+                                  <div class="item-clock d-flex align-center">
+                                    <input type="number" class="input-chose-time" value="17" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
+                                    <input type="number" class="input-chose-time" value="18" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
+                                    <span class="icon-trash" style="margin-left: 10px;"></span>
+                                  </div>
+                                  <div class="item-clock d-flex align-center">
+                                    <input type="number" class="input-chose-time" value="20" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
+                                    <input type="number" class="input-chose-time" value="21" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span class="icon-trash" style="margin-left: 10px;"></span>
                                   </div>
                                   <div class="d-flex align-center justify-end">
@@ -281,13 +289,15 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                           <div class="item-time-interview" style="padding:12px 0;border-bottom:1px dashed">
                             <div class="d-flex align-center justify-space-between">
                               <div>
-                                <input class="input-checkbox" type="checkbox" style="width: 15px;height:15px;margin-right: 15px;color: #707070;">
-                                <span style="font-size:16px; color:#666666;font-weight:bold;">2021年10月25日（月）</span>
+                                <label class="label-input-checkbox" style="font-size:16px; color:#666666;font-weight:bold;">2021年10月29日（木）
+                                  <input type="checkbox" class="input-checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
                               </div>
                               <div class="d-flex">
                                 <div style="font-weight: bold; color: #21BBFB;margin-right: 15px;">|</div>
-                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;" class="show-area-chose-time">17時〜19時</div>
-                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px;">|</div>
+                                <div style="font-size: 16px; font-weight: bold;color: #21BBFB;cursor: pointer;margin-right: 15px;" class="show-area-chose-time">17時〜19時</div>
+                                <div style="font-weight: bold; color: #21BBFB;margin:0 15px 0 0;">|</div>
                                 <div style="font-size: 16px; font-weight: bold;color: #21BBFB;">20時以降</div>
                               </div>
                             </div>
@@ -301,27 +311,27 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                                 </div>
                                 <div class="clock-right">
                                   <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
+                                    <input type="number" class="input-chose-time" value="17" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
+                                    <input type="number" class="input-chose-time" value="18" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="30" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span class="icon-trash" style="margin-left: 10px;"></span>
                                   </div>
                                   <div class="item-clock d-flex align-center">
-                                    <input type="number" class="input-chose-time" value="2">
+                                    <input type="number" class="input-chose-time" value="20" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="30">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                    <input type="number" class="input-chose-time" value="6">
+                                    <input type="number" class="input-chose-time" value="21" style="text-align: center;">
                                     <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                    <input type="number" class="input-chose-time" value="20">
-                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                                    <input type="number" class="input-chose-time" value="00" style="text-align: center;">
+                                    <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                     <span class="icon-trash" style="margin-left: 10px;"></span>
                                   </div>
                                   <div class="d-flex align-center justify-end">
@@ -343,15 +353,15 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                             </div>
                             <div class="content-add-schedule">
                               <div class=" d-flex align-center">
-                                <input type="date" class="input-chose-date" style="margin-right: 20px;margin-left: 20px;">
-                                <input type="number" value="17" class="input-chose-time">
+                                <input placeholder="2021/01/01" onfocus="(this.type='date')" type="text" class="input-chose-date" style="margin-right: 20px;margin-left: 20px;text-align: center;padding: 0 20px;">
+                                <input type="number" value="17" class="input-chose-time" style="text-align: center;">
                                 <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                <input type="number" value="30" class="input-chose-time">
+                                <input type="number" value="30" class="input-chose-time" style="text-align: center;">
                                 <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                 <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                <input type="number" value="18" class="input-chose-time">
+                                <input type="number" value="18" class="input-chose-time" style="text-align: center;">
                                 <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                <input type="number" value="30" class="input-chose-time">
+                                <input type="number" value="30" class="input-chose-time" style="text-align: center;">
                                 <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
                                 <span class="icon-trash" style="margin-left: 10px;"></span>
                               </div>
@@ -638,14 +648,11 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
       $('[data-remodal-id=overWrite]').remodal().open();
   }
   $(document).ready(function(){
-    $('.input-checkbox').change(function() {
-      if (this.checked) {
-        
-      } else {
-        $(this).parent().parent().parent().find('.area-chose-time').hide();
-      }
+    $('.label-input-checkbox').click(function() {
+      $(this).parent().parent().find('.input-checkbox').prop('checked', false);
+      $(this).parent().parent().parent().find('.area-chose-time').hide();
     });
-    
+
     $('.show-area-chose-time').click(function() {
       $(this).parent().parent().parent().find('.area-chose-time').show();
       $(this).parent().parent().find('.input-checkbox').prop('checked', true);
