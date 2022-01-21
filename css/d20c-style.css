@@ -1,0 +1,51 @@
+
+.schedule-presentation .career-sheet::before {
+    content: '\f08e';
+    top: 1px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+}
+
+.face-day::before {
+    content: '\e90f';
+    top: 0;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+} 
+
+.return-applicant-list {
+    background: linear-gradient(to bottom, #a6a6a6 0%, #878787 100%) !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 30px;
+    border-color: #666;
+}
+
+.btn-carried-out {
+    color:#ffffff;
+    font-weight:600;
+    border-radius:5px;
+    background:#00BBFD;
+    width:120px;
+    height:30px;
+    line-height: 33px;
+    border: none;
+}
+.btn-not-performed {
+    color:#ffffff;
+    font-weight:600;
+    border-radius:5px;
+    background:#8F8F8F;
+    width:120px;
+    height:30px;
+    line-height: 33px;
+    border: none;
+}

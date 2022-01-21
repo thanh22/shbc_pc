@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <title>選考を進める（メール作成）</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!--[if lt IE 9]>
+<script src="./lib/html5shiv.js"></script>
+<script src="./lib/selectivizr-min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/ie8.css">
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="./css/styles.css?2201121623">
+<link rel="stylesheet" type="text/css" href="./css_b/styles_b.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">
+var ua = navigator.userAgent;
+var getDevice = (function(){
+if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+document.write('<meta name="viewport" content="width=device-width">');
+}else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+document.write('<meta name="viewport" content="width=1200, user-scalable=no, maximum-scale=1.0">');}
+else{
+document.write('<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">');}
+})();
+</script>
+<meta name="_csrf_header" content="X-CSRF-TOKEN">
+<meta name="_server_context_path" content="/" />
+<!-- TODO リンクを無効化するスタイルの定義はここで良いか判断してもらう -->
+<style>
+  .disable-link {
+    pointer-events: none;
+    cursor: default;
+    color: #bebebe;
+  }
+</style>
+
+
+  <link rel="stylesheet" type="text/css" href="./lib/remodal/remodal.css">
+  <link rel="stylesheet" type="text/css" href="./css/remodal-style.css">
+  <link rel="stylesheet" type="text/css" href="./css/d20c-style.css">
+</head>
+<body class="pubInfo" data-active-nav="04" data-current-nav="04-01">
+<div id="wrapper">
+  <header id="siteHeader">
+<div id="siteID"><a href="./"><img src="./img/siteID.png" width="170" height="30" alt="イーキャリア"></a>採用ご担当者様ページ</div>
+  <div class="user">株式会社エージェントソフトウェア　(<span id="companyCode">X0000000003</span>)　伊藤 和子様</div>
+<a href="javascript: document.logoutForm.submit()" class="logout">ログアウト</a>
+<form name="logoutForm" action="/logout" method="post"><input type="hidden" name="_csrf" value="a340869a-9b3d-41c0-b7ef-061438e392d2"/>
+  <input hidden type="submit" value="Sign Out"/>
+</form>
+</header>
+
+
+  <div id="container">
+
+    <!--
+      -- changed area START
+      -->
+
+    <main id="pageBody">
+      <div class="breadcrumbs">
+        <ul>
+          <li><a href="./entry">応募者管理</a></li>
+          <li style="margin-left: -20px;"><a href="./entry/list">応募者一覧</a></li>
+        </ul>
+      </div>
+
+      <header class="pageBodyHeader">
+        
+        <h1>面接日をキャンセルする</h1>
+      </header>
+
+      <article class="applicant">
+
+        <div class="schedule-presentation">
+            <div>
+                <div>下記の面接日をキャンセルします。</div>
+                <div>この操作は元に戻せません。</div>    
+            </div>
+            <div style="background: #FFE0FE;padding: 10px;margin-top: 20px;margin-bottom: 40px;">
+                <div style="border:1px solid #CCCCCC" class="d-flex">
+                    <div style="width:98px;background: #F2F2F2;text-align: center;padding-top: 25px;">対象者</div>
+                    <div style="background:#ffffff;width: 100%;padding: 14px;padding-bottom: 0;">
+                        <div class="d-flex align-center" style="background: #F2F2F2;padding: 8px 10px;">
+                            <div style="width: 50%;">萩田由紀子</div>
+                            <div class="career-sheet" style="color:#0C6596;width: 50%;">キャリアシート</div>
+                        </div>
+                        <div class="d-flex" style="margin-top: 20px;margin-bottom: 20px;background: #00BBFD;border-radius: 5px;padding: 15px 30px;">
+                            <div class="face-day" style="margin-right: 50px;"><span style="color: #ffffff;font-size: 18px;font-weight: 600;">面接日</span></div> 
+                            <div style="margin-right: 115px;">
+                                <div>
+                                    <span style="font-size: 20px;font-weight: 600;color:#ffffff">10月25日（月）</span>
+                                    <span style="font-size: 20px;font-weight: 600;color: #ffffff;">20：00〜21：00</span>
+                                </div>
+                                <div style="font-size: 16px;color: #ffffff;">本社　東京都港区六本木2-4-5 六本木Ｄスクエア</div>
+                            </div>
+                            <div style="line-height: 25px;">
+                                <span style="font-size:12px;font-weight:bold;color: #ffffff;margin-right: 5px;">キャンセル</span>
+                                <span class="close" style="color: #ffffff;font-weight: normal;">&times;</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+           
+            <div class="d-flex justify-center">
+              <button class="return-applicant-list" style="width: 170px;margin-right: 20px;">戻る</button>
+              <button class="return-applicant-list" style="width: 255px;">この日程をキャンセルする</button>
+            </div>
+        </div>
+
+      </article>
+
+
+      <!--// #pageBody -->
+    </main>
+      
+    <!--
+      -- changed area END
+      -->
+
+    <aside id="siteAside">
+      <header>
+        <dl>
+          <dt>ご契約期間</dt>
+          <dd>2017/01/11 〜 2017/04/04</dd>
+        </dl>
+      </header>
+      <nav>
+        <ul>
+          <li class="home" data-nav-index="01"><a href="./">管理者トップ</a></li>
+
+          <li class="pubInfo" data-nav-index="02">
+            <a href="./nonpublic">掲載情報管理</a>
+            <ul>
+              
+              
+              <li data-nav-index="02-03"><a href="./nonpublic">非公開求人情報設定</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="applicant" data-nav-index="04">
+            <a href="./entry">応募者管理<i></i></a>
+            <ul>
+              <li data-nav-index="04-01"><a href="./entry/list">応募者一覧</a></li>
+              <li data-nav-index="04-04"><a href="./entry/search">応募者名検索</a></li>
+              <li data-nav-index="04-02"><a href="./entry/closed">選考終了一覧</a></li>
+              <li data-nav-index="04-03"><a href="./entry/recruiting">採用選考状況</a></li>
+            </ul>
+          </li>
+
+          <li class="scout" data-nav-index="05">
+            <a href="./scout">スカウト</a>
+            <ul>
+              <li data-nav-index="05-01"><a href="./scout/condition/init">検索条件設定</a></li>
+              <li data-nav-index="05-02"><a href="./scout/condition/list">保存条件一覧</a></li>
+              <li data-nav-index="05-03">
+                <a href="./scout/bookmark">ブックマーク</a>
+              </li>
+              
+              <li data-nav-index="05-05"><a href="./scout/mails">送信済みスカウト検索</a></li>
+            </ul>
+          </li>
+          <li class="performance" data-nav-index="06"><a href="./performance/week">パフォーマンスデータ</a>
+            <ul>
+              <li data-nav-index="06-01"><a href="./performance/week">週間レポート</a></li>
+              <li data-nav-index="06-02"><a href="./performance/month">月間レポート</a></li>
+            </ul>
+          </li>
+          <li class="setting" data-nav-index="07"><a href="./configuration">各種設定</a>
+            <ul>
+              <li data-nav-index="07-01"><a href="./configuration/template">メールテンプレート一覧</a></li>
+              <li data-nav-index="07-02">
+                <a href="./configuration/editoraccount/request">原稿制作アカウント発行</a></li>
+              <li data-nav-index="07-03"><a href="./configuration/password/edit">管理者パスワード変更</a>
+              </li>
+              <li data-nav-index="07-04">
+                <a href="./configuration/notification">通知先メールアドレス設定</a></li>
+              <li data-nav-index="07-05">
+                <a href="./configuration/assessment">評価の設定</a></li>
+              <li data-nav-index="07-06"><a href="./configuration/entry">重複応募の設定</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="banner"><a href="./questionnaire">企業アンケートにご協力ください</a></div>
+
+        <a href="./company#a04" class="bannerOnlineInterview disable">
+          <div class="text_1">無料（時間制限なし）</div>
+          <div class="text_2">WEB面接機能<span> が使えます</span></div>
+          <div class="text_3">チェックするだけ 設定はこちら</div>
+        </a>
+
+        
+
+      </nav>
+    </aside>
+
+  </div>
+  <!--// #container --><!--</div>-->
+
+<!--// #wrapper --><!--</div>-->
+</div>
+<script src="./webjars/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/component/ec_components.js"></script>
+<script src="./js/script_common/ajax_settings.js"></script>
+<script src="./js/ecareer_company.js"></script>
+<script src="./js/component/invokeMailer.js"></script>
+<!--[if lt IE 9]>
+<script>$('body').addClass('ie8');</script>
+<script src="./js/ie8.js"></script>
+<![endif]-->
+
+<script src="./js/max_scroller.js"></script>
+<script src="./lib/remodal/remodal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/2.4.0/dash.all.min.js"></script>
+
+<script>
+
+
+</script>
+
+</body>
+</html>
