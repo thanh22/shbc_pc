@@ -353,7 +353,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                             </div>
                             <div class="content-add-schedule">
                               <div class=" d-flex align-center">
-                                <input placeholder="2021/01/01" onfocus="(this.type='date')" type="text" class="input-chose-date" style="margin-right: 20px;margin-left: 20px;text-align: center;padding: 0 20px;">
+                                <input value="2021-01-01" type="date" class="input-chose-date" style="margin-right: 20px;margin-left: 20px;text-align: center;padding: 15px;color: #6666;">
                                 <input type="number" value="17" class="input-chose-time" style="text-align: center;">
                                 <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
                                 <input type="number" value="30" class="input-chose-time" style="text-align: center;">
@@ -453,7 +453,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                   </div>
                   <div>
                     <span class="icon-map"></span>
-                    <span style="color:#0C6596;">東京都新宿区新宿７丁目２７−１９</span>
+                    <span class="text-result-location" style="color:#0C6596;">東京都新宿区新宿７丁目２７−１９</span>
                   </div>
                 </div>
               </div>
@@ -577,41 +577,41 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
     <div style="padding: 20px 0;">
       <div class="d-flex align-center" style="height: 40px;border-bottom: 1px dashed #666666;padding-left: 15px;">
         <div style="margin-right: 45px;" class="d-flex align-center">
-          <input type="radio" style="margin-right: 10px;">
+          <input type="radio" style="margin-right: 10px;" name="chose" class="radio-location" value="1">
           <div style="font-weight: bold;color: #666666;width: 85px;">新宿本社</div>
         </div>
         <div>
-          <span style="color: #666666;">東京都新宿区新宿３丁目２７</span>
+          <span class="name-location" style="color: #666666;">東京都新宿区新宿３丁目２７</span>
         </div>
       </div>
 
       <div class="d-flex align-center" style="height: 50px;border-bottom: 1px dashed #666666;padding-left: 15px;">
         <div style="margin-right: 45px;" class="d-flex align-center">
-          <input type="radio" style="margin-right: 10px;">
+          <input type="radio" style="margin-right: 10px;" name="chose" class="radio-location" value="2">
           <div style="font-weight: bold;color: #666666;width: 85px;">新宿本社（東口）</div>
         </div>
         <div>
-          <span style="color: #666666;">東京都新宿区新宿３丁目２７</span>
+          <span class="name-location" style="color: #666666;">東京都新宿区新宿３丁目２７</span>
         </div>
       </div>
 
       <div class="d-flex align-center" style="height: 40px;border-bottom: 1px dashed #666666;padding-left: 15px;">
         <div style="margin-right: 45px;" class="d-flex align-center">
-          <input type="radio" style="margin-right: 10px;">
+          <input type="radio" style="margin-right: 10px;" name="chose" class="radio-location" value="3">
           <div style="font-weight: bold;color: #666666;width: 85px;">渋谷営業部</div>
         </div>
         <div>
-          <span style="color: #666666;">東京都渋谷区神南２丁目２</span>
+          <span class="name-location" style="color: #666666;">東京都渋谷区神南２丁目２</span>
         </div>
       </div>
 
       <div class="d-flex align-center" style="height: 40px;border-bottom: 1px dashed #666666;padding-left: 15px;">
         <div style="margin-right: 45px;" class="d-flex align-center">
-          <input type="radio" style="margin-right: 10px;">
+          <input type="radio" style="margin-right: 10px;" name="chose" class="radio-location" value="4">
           <div style="font-weight: bold;color: #666666;width: 85px;">横浜営業部</div>
         </div>
         <div>
-          <span style="color: #666666;">神奈川県横浜市西区南幸１丁目５−１</span>
+          <span class="name-location" style="color: #666666;">神奈川県横浜市西区南幸１丁目５−１</span>
         </div>
       </div>
 
@@ -682,12 +682,9 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
       $('.area-input-suggest').show();
     });
 
-    // $('.btn-decide').click(function() {
-    //   $('.suggested-interview-candidate-date').show();
-    //   $('.area-suggested-candidate').css("opacity","unset");
-    //   $('.area-button-suggest').hide();
-    //   $('.area-result-location').show();
-    // })
+    $('.input-chose-date').change(function() {
+        $('.input-chose-date').css('color','#000000');
+    });
     
     
     var modal = document.getElementById("myModal");
@@ -696,6 +693,23 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
         modal.style.display = "none";
       }
     }
+
+    $('input:radio[name=chose]').change(function() {
+      if (this.value === "1") {
+        let location = $(this).parent().parent().find('.name-location').html();
+        console.log(location);
+        $('.text-result-location').text(location);
+      } else if (this.value === "2") {
+        let location = $(this).parent().parent().find('.name-location').html();
+        $('.text-result-location').text(location);
+      } else if (this.value === "3") {
+        let location = $(this).parent().parent().find('.name-location').html();
+        $('.text-result-location').text(location);
+      } else if (this.value === "4") {
+        let location = $(this).parent().parent().find('.name-location').html();
+        $('.text-result-location').text(location);
+      }
+    });
 
     $('.btn-add-new-preview').click(function() {
       $('.suggested-interview-candidate-date').show();
