@@ -49,3 +49,11 @@
     line-height: 33px;
     border: none;
 }
+
+.circle-outlined {
+    background-color: #71D5FF;
+    border:3px solid #ffffff;    
+    height:40px;
+    border-radius:50% !important;
+    width:40px;
+}

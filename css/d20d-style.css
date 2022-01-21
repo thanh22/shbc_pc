@@ -1,0 +1,21 @@
+.schedule-presentation .career-sheet::before {
+    content: '\f08e';
+    top: 1px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+}
+
+.input-chose-date {
+    width: 162px !important;
+    height: 40px;
+    border-radius: 2px !important;
+}
+.input-chose-time {
+    width: 82px !important;
+    height: 40px;
+    border-radius: 2px !important;
+}
