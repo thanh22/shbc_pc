@@ -658,10 +658,10 @@ ul.regular { margin: 0 0 30px 1.5em; }
 }
 
 .content-status-interview .row-content-status-interview .btn-carried-out {
-	background: #37a2fa;border: #37a2fa;width: 140px;height: 35px;margin-right: 10px;
+	background: #37a2fa;border: #37a2fa;width: 140px;height: 35px;margin-right: 10px;line-height: 0;
 }
 .content-status-interview .row-content-status-interview .btn-not-performed {
-	background: #808080;border: #808080;width: 140px;height: 35px;
+	background: #808080;border: #808080;width: 140px;height: 35px;line-height: 0;
 }
 
 /* The Modal (background) */
