@@ -19,3 +19,72 @@
     height: 40px;
     border-radius: 2px !important;
 }
+
+.face-day::before {
+    content: '\e90f';
+    top: 0;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #FB7D21;
+    font-family: ecicons;
+    vertical-align: middle;
+    position: relative;
+} 
+
+.background-btn-earth {
+    background: linear-gradient(to bottom, #bcb693 0%, #b0a980 100%) !important;
+    border-color: #837b4c;
+    border-radius: 5px;
+}
+
+.btn-select-location {
+    width: 170px;
+}
+.btn-do-it-online {
+    width: 170px;
+}
+
+.text-area-message {
+    width: 625px;
+    height: 134px;
+    padding: 14px 25px 67px 16px; 
+    resize: none;
+    border-radius: 2px;
+    margin-left:80px
+}
+
+.btn-send-candidate-interview {
+    border-color: #3181b4;
+    background: linear-gradient(to bottom, #51c8ff 0%, #1ab6ff 100%) !important;
+    width: auto;
+    padding: 0 20px;
+}
+.btn-send-candidate-interview::before {
+    content: '\e932';
+    display: inline-block;
+    font-family: ecicons;
+    margin-right: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+}
+
+.return-applicant-list {
+    background: linear-gradient(to bottom, #a6a6a6 0%, #878787 100%) !important;
+    border-color: #666;
+    width: 167px;
+    height: 48px;
+}
+
+.icon-trash::before {
+    content: '\f12d';
+    display: inline-block;
+    font-family: ecicons;
+    margin-right: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    color: #ffffff;
+}

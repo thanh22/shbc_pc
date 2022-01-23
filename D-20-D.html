@@ -85,21 +85,21 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                             <div style="width: 50%;">萩田由紀子</div>
                             <div class="career-sheet" style="color:#0C6596;width: 50%;">キャリアシート</div>
                         </div>
-                        <div class="d-flex flex-column">
-                            <div>v</div>
-                                <div class=" d-flex align-center" style="background:#FB7D21;border-radius:5px;padding: 15px 20px;">
-                                  <input value="2021-01-01" type="date" class="input-chose-date" style="margin-right: 20px;margin-left: 20px;text-align: center;padding: 15px;color: #6666;">
-                                  <input type="number" value="17" class="input-chose-time" style="text-align: center;">
-                                  <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                  <input type="number" value="30" class="input-chose-time" style="text-align: center;">
-                                  <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
-                                  <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
-                                  <input type="number" value="18" class="input-chose-time" style="text-align: center;">
-                                  <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
-                                  <input type="number" value="30" class="input-chose-time" style="text-align: center;">
-                                  <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
-                                  <span class="icon-trash" style="margin-left: 10px;"></span>
-                                </div>
+                        <div class="d-flex flex-column" style="margin-top: 15px;">
+                            <div class="face-day"><span style="color: #FB7D21;font-size: 16px;font-weight: bold;">v</span></div>
+                            <div class=" d-flex align-center" style="background:#FB7D21;border-radius:5px;padding: 15px 20px;margin-bottom: 20px;">
+                              <input value="2021-01-01" type="date" class="input-chose-date" style="margin-right: 20px;margin-left: 20px;text-align: center;padding: 15px;color: #6666;">
+                              <input type="number" value="17" class="input-chose-time" style="text-align: center;">
+                              <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                              <input type="number" value="30" class="input-chose-time" style="text-align: center;">
+                              <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
+                              <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">~</span>
+                              <input type="number" value="18" class="input-chose-time" style="text-align: center;">
+                              <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">時</span>
+                              <input type="number" value="30" class="input-chose-time" style="text-align: center;">
+                              <span style="margin: 0 10px;font-weight: bold;color: #ffffff;">分</span>
+                              <span class="icon-trash" style="margin-left: 10px;"></span>
+                            </div>
                         </div>
                         
                         
@@ -107,10 +107,92 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                 </div>
             </div>
            
-            <div class="d-flex justify-center">
-              <button class="return-applicant-list" style="width: 170px;margin-right: 20px;">戻る</button>
-              <button class="return-applicant-list" style="width: 255px;">この日程をキャンセルする</button>
+            <div style="background: #FFF7E6;">
+              
             </div>
+            <div class="area-suggested-candidate" style="background: #FFF7E6;margin-top: 30px;padding: 30px 0;">
+              <div style="font-size: 16px;
+                          font-weight: bold;color: #666666;
+                          border-top: #FB7D21 2px dashed;
+                          border-bottom: #FB7D21 2px dashed;
+                          padding: 20px 0;width: 625px;
+                          margin: 0 auto;
+              " class="d-flex align-center">
+                <span style="margin-right: 120px;font-size: 16px;font-weight: bold;">面接日時</span>  
+                <div>
+                  <span style="color: #FB7D21;font-weight: 600;">10月25日（月）</span>
+                  <span style="color: #FB7D21;font-weight: 600;">17：30〜18：30</span>
+                </div>
+              </div>
+              <div class="d-flex" style="padding: 20px 0;border-bottom:dashed #FB7D21 2px;width: 625px;margin: 0 auto;">
+                <span style="font-size: 16px;font-weight: bold;color: #666666;margin-right: 55px;margin-top:6px">面接場所（任意）</span>
+                <div class="area-button-suggest">
+                  <button class="btn-select-location background-btn-earth">
+                    <span style="font-size: 16px;font-weight: bold;">場所を選択する</span>
+                  </button>
+                  <button class="btn-do-it-online background-btn-earth">
+                    <span style="font-size: 16px;font-weight: bold;">オンラインで行う</span>
+                  </button>
+                </div>
+                <div class="area-input-suggest" style="display: none;">
+                  <input type="text" placeholder="URLを入力してください" style="width: 438px;height: 40px;">
+                  <div style="color: #0C6596;margin-top: 15px;" class="d-flex align-center">
+                    <div style="cursor: pointer;margin-right:25px" class="text-select-location">
+                      <span style="font-size: 14px;margin-right: 5px;font-weight: bold;">></span><span>面接場所を選択する</span>
+                    </div>
+                    <div style="cursor: pointer;" class="enter-interview-location">
+                      <span style="font-size: 14px;margin-right: 5px;font-weight: bold;">></span><span>面接場所を入力する</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="area-input-information" style="display: none;">
+                  <div>
+                    <input type="text" placeholder="面接場所 名称" style="width: 438px;height:40px;padding-left: 15px;">
+                  </div>
+                  <div>
+                    <input type="text" placeholder="住所を入力してください" style="width: 438px;height:40px;padding-left: 15px;">
+                  </div>
+                  <div style="cursor: pointer;color: #0C6596;" class="d-flex justify-end">
+                    <span style="font-size: 14px;margin-right: 5px;font-weight: bold;">></span><span style="font-weight: bold;">登録済みの面接地から選択する</span>
+                  </div>
+                </div>
+
+                <div class="area-result-location" style="width: 438px;display: none;">
+                  <div class="d-flex justify-space-between">
+                    <div>
+                      <span style="color:#21BAFB;font-size:20px;">新宿本社</span>
+                    </div>
+                    
+                    <div>
+                      <span class="icon-pencil"></span>
+                      <span class="icon-trash" style="color: #B2B2B2;"></span>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="icon-map"></span>
+                    <span class="text-result-location" style="color:#0C6596;">東京都新宿区新宿７丁目２７−１９</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-center" style="margin-top: 30px;">
+                <textarea name="" id="" class="text-area-message"
+                    placeholder="当日の持ち物など、面接候補日の他に送りたいメッセージがありましたら、入力してください。"></textarea>
+                    <span style="margin-left: 10px;font-size: 12px;color: #666666;">0/2000文字</span>
+              </div>
+              <div style="text-align: center;margin-top: 30px;">
+                <button class="btn-send-candidate-interview">
+                  この面接日程を送信する
+                </button>
+              </div>
+            </div>
+        </div>
+
+        <div style="background: #E2F5FF;margin-top: 30px;padding: 35px 0;text-align: center;">
+          <button class="return-applicant-list">
+            <span style="font-size: 16px;font-weight: bold;color: #ffffff;">前の画面に戻る</span>
+          </button>
         </div>
 
       </article>
