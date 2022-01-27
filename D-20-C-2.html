@@ -109,10 +109,189 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
                     </div>
                 </div>
             </div>
-           
-            <div class="d-flex justify-center">
+            
+            <div class="person personAlign">
+              <section>
+                <h2>選考を進める</h2>
+                <p>現在の選考から先に進めることしかできません。メールを送らずに選考を進めることもできます。<br>
+                  <span class="note caution">メールを送って選考を進める場合は、プルダウンから選考を選択し下記のメール文面作成へ進んでください。</span></p>
+                <div class="processFunciton">
+
+                  <select id="progressSelect" name="inputProgressIdentifier">
+                    <option value="0" selected>選考を選択</option>
+                    
+                    <option value="2">書類選考</option>
+                    <option value="3">面接中</option>
+                    <option value="4">オファー</option>
+                    <option value="5">入社</option>
+                  </select>
+
+                  <button id="forwardbutton" class="btn proceed" data-remodal-target="promptSubmit">選考のみ進める</button>
+
+                </div>
+              </section>
+
+              <section>
+                <h2>メール文面作成</h2>
+                <div class="mailFunction">
+                  <select id="templateSelect" name="templateNumber">
+                    <option value="0" selected>テンプレートを選択</option>
+                    <option value="4">プリセット1</option>
+                    <option value="5">プリセット3</option>
+                    <option value="90000003">応募受付</option>
+                    <option value="90000004">面接オファー</option>
+                    <option value="90000005">オンライン面接オファー</option>
+                    <option value="90000006">次回面接オファー</option>
+                    <option value="90000007">書類選考のＮＧ連絡</option>
+                    <option value="90000008">面接のＮＧ連絡</option>
+                    <option value="90000009">内定通知</option>
+                    <option value="1">title1</option>
+                    <option value="2">title2</option>
+                    <option value="3">title3</option>
+                  </select>
+                  <p class="btnSpace">
+                    <a href="javascript:void(0)" onclick="openModal(); return false;" class="btn regular">選択する</a>
+                    <a href="javascript:void(0)" class="btn sub" data-remodal-target="promptReset">リセット</a>
+                  </p>
+                </div>
+                <table class="mailSetting">
+                  <tr>
+                    <th>返信設定</th>
+                    <td><label class="check"><input type="checkbox" id="replyable.availability1" name="replyable.availability" value="true"><input type="hidden" name="_replyable.availability" value="on"/>
+                      返信不可にする</label></td>
+                  </tr>
+                  <tr>
+                    <th>件名</th>
+                    <td class="insertWrap count">カーソル位置に<a href="#" class="btn insert" data-text="{user_id}">{user_id}を挿入</a>
+                      <input type="text" id="subject" maxlength="100" class="full countElm target" name="subject" value="">
+                      <p class="note"><span class="counter">0</span>/100文字</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>本文</th>
+                    <td class="insertWrap count">カーソル位置に<a href="#" class="btn insert" data-text="{user_id}">{user_id}を挿入</a>
+                      <textarea id="content" class="full countElm target l600" name="content"></textarea>
+                      <p class="note"><span class="counter">0</span>/2000文字</p>
+                    </td>
+                  </tr>
+                </table>
+                
+
+                  <div class="mailDisplay">
+                      <p>●件名・本文に自動で会員氏名（会員No）を挿入する場合<br>
+                          【{user_id}を挿入】ボタンをクリックすると、応募者には会員氏名、スカウトメールには会員Noが表示されます。<br>
+                          &lt;例&gt;<br>
+                          {user_id} 様　ご応募ありがとうございました。→　山田　太郎 様　ご応募ありがとうございました。<br>
+                          {user_id} 様　キャリアシートを拝見しました。　→　会員No.00364 様　キャリアシートを拝見しました。</p>
+                  </div>
+
+
+                <div class="btnSpace function">
+                  <p>選択されている選考：<b id="selectedProgress"></b></p>
+                  <button type="submit" class="btn mail" formaction="/entry/progress/1/confirm/mail">
+                    送信内容を確認する
+                  </button>
+                </div>
+
+              </section>
+
+              <section>
+                <h2>選考を戻す</h2>
+                <p>誤って進めてしまった選考を戻す場合は選考を戻す画面にお進みください。</p>
+                <div class="processFunciton">
+                  <a href="./entry/10008/progress/1/backward" class="btn proceed">選考を戻す</a>
+                </div>
+              </section>
+
+              <div id="resultMail">
+              </div>
+            </div>
+
+            <div class="email-history">
+              <div><span style="font-size: 16px;font-weight: bold;">メール履歴</span></div>
+              <div class="area-email-history" style="background: #dadada;padding-left: 15px;padding-top: 20px;padding-bottom: 25px;padding-right: 45px;">
+                <div class="item-email">
+                  <div style="margin-bottom:5px">2021/11/30 18:01</div>
+                  <div style="background: #EFFBFF;padding: 20px;">
+                    <p>以下の日程で面接日が確定しました。</p>
+                    <div class="d-flex align-center">
+                      <div style="width: 20px;height: 20px;background: #21BAFB;color: #ffffff;border-radius: 50%;font-size: 14px;text-align: center;margin-right: 10px;">2</div>
+                      <div style="margin-right: 20px;">
+                        <span style="font-size: 20px;color: #21BAFB;font-weight: normal;">10月25日（月）</span>
+                      </div>
+                      <div style="font-size: 20px;">
+                        <span style="color: #21BAFB;font-weight: normal;">20：00〜21：00</span>
+                      </div>
+                    </div>
+                    <div style="margin-top:15px;"><span style="font-size: 16px;font-weight: bold;color: #666666;">面接場所</span></div>
+                    <div><span style="font-size: 16px;color: #1E9ADC;">東京都港区六本木2-4-5 六本木Ｄスクエア</span></div>
+                    <div style="margin-top:10px;margin-bottom:15px">
+                      <span>履歴書　職務経歴書　〇〇資格を証明するものをお持ちください。</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-email email-rep">
+                  <div style="margin-bottom:5px">
+                    <span class="icon"></span>
+                    <span>和田 由紀子さん</span>
+                    <span>2021/11/30 14:58</span>
+                  </div>
+                  <div style="background: #FFFFE9;padding: 20px;">
+                    <p>以下の日程で面接を希望します。</p>
+                    <div class="d-flex align-center">
+                      <div style="width: 20px;height: 20px;background: #21BAFB;color: #ffffff;border-radius: 50%;font-size: 14px;text-align: center;margin-right: 10px;">2</div>
+                      <div style="margin-right: 20px;">
+                        <span style="font-size: 20px;color: #21BAFB;font-weight: normal;">10月25日（月）</span>
+                      </div>
+                      <div style="font-size: 20px;">
+                        <span style="color: #21BAFB;font-weight: normal;">20：00〜21：00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item-email">
+                  <div style="margin-bottom:5px">2021/11/30 14:02</div>
+                  <div style="background: #EFFBFF;padding: 20px;">
+                    <p>以下の日程で面接日が確定しました。</p>
+                    <div class="d-flex align-center">
+                      <div style="width: 20px;height: 20px;background: #21BAFB;color: #ffffff;border-radius: 50%;font-size: 14px;text-align: center;margin-right: 10px;">1</div>
+                      <div style="margin-right: 20px;">
+                        <span style="font-size: 20px;color: #21BAFB;font-weight: normal;">10月25日（月）</span>
+                      </div>
+                      <div style="font-size: 20px;">
+                        <span style="color: #21BAFB;font-weight: normal;">17：30〜18：30</span>
+                      </div>
+                    </div>
+                    <div class="d-flex align-center">
+                      <div style="width: 20px;height: 20px;background: #21BAFB;color: #ffffff;border-radius: 50%;font-size: 14px;text-align: center;margin-right: 10px;">2</div>
+                      <div style="margin-right: 20px;">
+                        <span style="font-size: 20px;color: #21BAFB;font-weight: normal;">10月25日（月）</span>
+                      </div>
+                      <div style="font-size: 20px;">
+                        <span style="color: #21BAFB;font-weight: normal;">20：00〜21：00</span>
+                      </div>
+                    </div>
+                    <div style="margin-top:15px;"><span style="font-size: 16px;font-weight: bold;color: #666666;">面接場所</span></div>
+                    <div><span style="font-size: 16px;color: #1E9ADC;">東京都港区六本木2-4-5 六本木Ｄスクエア</span></div>
+                    <div style="margin-top:10px;margin-bottom:15px">
+                      <span>履歴書　職務経歴書　〇〇資格を証明するものをお持ちください。</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="">
               <button class="return-applicant-list" style="width: 170px;margin-right: 20px;">戻る</button>
               <button class="return-applicant-list" style="width: 255px;">この日程をキャンセルする</button>
+            </div> -->
+
+            <div style="background: #E2F5FF;padding: 35px 0;text-align: center;margin-top: 40px;">
+              <button class="return-applicant-list">
+                <span style="font-size: 16px;font-weight: bold;">応募者一覧に戻る</span>
+              </button>
             </div>
         </div>
 
@@ -203,8 +382,7 @@ document.write('<meta name="viewport" content="width=device-width,initial-scale=
 
       </nav>
     </aside>
-
-  </div>
+     
   <!--// #container --><!--</div>-->
 
 <!--// #wrapper --><!--</div>-->
